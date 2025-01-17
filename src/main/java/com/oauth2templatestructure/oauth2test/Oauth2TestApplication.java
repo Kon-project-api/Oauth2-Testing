@@ -8,6 +8,7 @@ public class Oauth2TestApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(Oauth2TestApplication.class, args);
+        System.out.println("Hello World");
     }
 
 }
