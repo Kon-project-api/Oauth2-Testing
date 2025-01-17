@@ -1,0 +1,36 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: YOUR_GOOGLE_CLIENT_ID
+            client-secret: YOUR_GOOGLE_CLIENT_SECRET
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+            scope: profile, email
+#          facebook:
+#            client-id: YOUR_FACEBOOK_CLIENT_ID
+#            client-secret: YOUR_FACEBOOK_CLIENT_SECRET
+#            redirect-uri: "{baseUrl}/login/oauth2/code/facebook"
+#            scope: public_profile, email
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+#          facebook:
+#            authorization-uri: https://www.facebook.com/dialog/oauth
+#            token-uri: https://graph.facebook.com/oauth/access_token
+#            user-info-uri: https://graph.facebook.com/me?fields=id,name,email,picture
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/bravotte_db
+    username: postgres
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 10MB
