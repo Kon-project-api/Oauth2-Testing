@@ -10,7 +10,7 @@ public class Oauth2TestApplication {
         SpringApplication.run(Oauth2TestApplication.class, args);
         System.out.println("Hello World");
         System.out.println("Hello World");
-
+        System.out.println("Hello World");
     }
 
 }
